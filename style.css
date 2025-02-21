@@ -6,14 +6,12 @@ nav{
     top: 0;
     left: 0;
     z-index: 1000;
-    
 }
 nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: center;
-    
 }
 nav ul li{
     display: inline;
@@ -31,7 +29,7 @@ nav ul li a:hover{
 body{
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
-    padding-top: 70px;
+    padding-top: 50px;
     text-align: center;
     background: color #f4f4f4;
 }
@@ -49,7 +47,7 @@ header{
     margin-top: 10px;
 }
 section{
-    
+    padding-top: 100px;
     width: 80%;
     margin: 20px auto;
     padding: 20px;
@@ -66,16 +64,15 @@ section :hover{
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: row;
+        flex-direction: row ;
         align-items: center;
         padding: 10px 0;
         justify-content: space-around;
-        gap: 20px;
-        
+        gap: 10px;
     }
     nav ul li{
         display: inline;
-        
+     
     }
 }
 @media (max-width: 768px) {
@@ -151,8 +148,8 @@ section :hover{
     transition: background 0.3s;
 }
 .btn:hover{
-    background:blue;
-    rotate: 10deg;
+    background: #f4a261;
+    transform: scale(1.02);
 }
 @media (max-width: 768px) {
     .project{
@@ -187,4 +184,113 @@ footer{
 .social-links a:hover{
     rotate: 2deg;
     color: #f4a261;
+}
+.dark-mode{
+    background-color: #1e1e1e;
+    color: white;
+}
+.dark-mode header,
+.dark-mode footer,
+.dark-mode nav{
+    background: #222;
+}
+.dark-mode section{
+    background:#333;
+    color: white;
+}
+.dark-mode #projects{
+    background-color:#222;
+    color: white;
+}
+.dark-mode .project{
+    background-color: #222;
+    color: white;
+}
+@media (max-width: 768px) {
+    .dark-mode h1,
+    .dark-mode h2,
+    .dark-mode p,
+    .dark-mode ul li{
+        color: white;
+    }
+}
+#theme-toggle{
+    display:inline-block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    background:#333;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 5px;
+}
+#theme-toggle:hover{
+    transform: scale(1.05);
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+input,textarea{
+    margin: 10px 0;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+}
+button{
+    display: inline;
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+button:hover{
+    background: #f4a261;
+    
+}
+.dark-mode button{
+    color:white;
+    background: #555;
+}
+.dark-mode button:hover{
+    background: #f4a261;
+}
+#scroll-top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s,transform 0.3s;
+    padding: 10px 15px;
+
+}
+#scroll-top:hover{
+    background: #f4a261;
+    transform: scale(1.1);
+}
+#typing-text{
+    font-size: 32px;
+    font-weight: bold;
+    color: #f4a261;
+    display: inline-block;
+    border-right: 5px solid white;
+    padding-right: 5px;
+    overflow: hidden;
+    animation: blink 0.7s infinite;
+    white-space: nowrap;
+}
+@keyframes blink{
+    50%{border-color: transparent;}
 }
