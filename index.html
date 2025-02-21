@@ -5,19 +5,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Porfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
     </head>
     <body>
         <nav>
+            
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#top 3 favourite movies">Top 3 favourite movies</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <button id="theme-toggle">🌙 Dark Mode</button>
             </ul>
+            
         </nav>
         <header>
             <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>Hein Lin Zaw</h1>
+            <h1 id="typing-text"></h1>
             <p>
                 Web Developer | Learner | Creater
             </p>
@@ -33,44 +37,51 @@
                 <li>CSS</li>
                 <li>JavaScript</li>
             </ul>
-            <section id="projects">
-                <h2>My Projects</h2>
+        </section>
+        <section id="projects">
+            <h2>My Projects</h2>
             
                 <!-- Project One -->
-                <div class="project">
-                    <img src="project1.jpg" alt="Project 1">
-                    <div class="project-info">
-                        <h3>Project One</h3>
-                        <p>A simple website built using HTML, CSS, and JavaScript.</p>
-                        <a href="https://www.instagram.com/niehlynnz?igsh=MWJxamsxeHJ5Zmx5MQ==" class="btn">View Project</a>
-                    </div>
-                </div> <!-- Correctly closed -->
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1">
+                <div class="project-info">
+                    <h3>Project One</h3>
+                    <p>A simple website built using HTML, CSS, and JavaScript.</p>
+                    <a href="https://www.instagram.com/niehlynnz?igsh=MWJxamsxeHJ5Zmx5MQ==" class="btn">View Project</a>
+                </div>
+            </div> <!-- Correctly closed -->
             
                 <!-- Project Two (Fixed Structure) -->
-                <div class="project"> <!-- This was missing -->
-                    <img src="project2.jpg" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Project Two</h3>
-                        <p>A Fun Youtube Page posting random stuff.</p>
-                        <a href="https://youtube.com/@w.w3535?si=Wp3IVvbSGjr8WEA9" class="btn">View Project</a>
-                    </div>
-                </div> 
+            <div class="project"> <!-- This was missing -->
+                <img src="project2.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <p>A Fun Youtube Page posting random stuff.</p>
+                    <a href="https://youtube.com/@w.w3535?si=Wp3IVvbSGjr8WEA9" class="btn">View Project</a>
+                </div>
+            </div> 
                 
-                <div class="project">
-                    <img src="project3.jpg" alt="Project 2">
-                    <div class="project-info">
-                        <h3>Project Three</h3>
-                        <p>This is a playlist.</p>
-                        <a href="https://open.spotify.com/playlist/1C040Mjk6jwoZBzF8mvvZ4?si=cPses9ZnTQGAm0ZfypVV_w&pi=tALDC_b2ROm4W" class="btn">View Project</a>
-                    </div>
+            <div class="project">
+                <img src="project3.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>This is a playlist.</p>
+                    <a href="https://open.spotify.com/playlist/1C040Mjk6jwoZBzF8mvvZ4?si=cPses9ZnTQGAm0ZfypVV_w&pi=tALDC_b2ROm4W" class="btn">View Project</a>
+                 </div>
 
-                </div><!-- Correctly closed -->
+            </div><!-- Correctly closed -->
             
-            </section>
+        </section>
             
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: heinlynnzawcapitalh@gmail.com</p>
+            <h2>Contact me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="text" id="email" placeholder="Your Email">
+                <textarea id="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+                <p id="form-message"></p>
+            </form>   
         </section>
         <section id="top 3 favourite movies">
             <h2>Top 3 favourite movies</h2>
@@ -87,6 +98,7 @@
                 <a href="https://www.facebook.com/share/1BLk2ETS8f/" target="_blank">Facebook</a>
             </div>
         </footer>
+        <button id="scroll-top">⬆️</button>
     </body>
 </html>
 
