@@ -83,3 +83,39 @@ function typeEffect(){
 window.onload=()=>{
     setTimeout(typeEffect,500);
 };
+const filterbuttons=document.querySelectorAll(".filter-btn");
+const projects=document.querySelectorAll(".project")
+
+filterbuttons.forEach(button =>{
+    button.addEventListener("click",()=>{
+        filterbuttons.forEach(btn =>btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const category=button.getAttribute("data-category");
+
+        projects.forEach(project=>{
+            const projectcategory=project.getAttribute("data-category");
+
+            if(category==="All"){
+                project.classList.add("show");
+            }else if(projectcategory===category){
+                project.classList.add("show");
+            }else{
+                project.classList.remove("show");
+            }
+
+    });
+    });
+});
+const navlinks=document.getElementById("nav-links");
+const menutoggle=document.getElementById("menu-toggle");
+
+menutoggle.addEventListener("click",()=>{
+    navlinks.classList.toggle("show");
+});
+
+document.querySelectorAll("#nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        navlinks.classList.remove("show");
+    });
+});
