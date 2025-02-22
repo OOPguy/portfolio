@@ -9,15 +9,14 @@
     </head>
     <body>
         <nav>
-            
-            <ul>
+            <button id="menu-toggle">☰</button>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+            <ul id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <button id="theme-toggle">🌙 Dark Mode</button>
             </ul>
-            
         </nav>
         <header>
             <img src="profile.jpg" alt="Profile Picture" class="profile-pic">
@@ -41,34 +40,41 @@
         <section id="projects">
             <h2>My Projects</h2>
             
-                <!-- Project One -->
-            <div class="project">
-                <img src="project1.jpg" alt="Project 1">
-                <div class="project-info">
-                    <h3>Project One</h3>
-                    <p>A simple website built using HTML, CSS, and JavaScript.</p>
-                    <a href="https://www.instagram.com/niehlynnz?igsh=MWJxamsxeHJ5Zmx5MQ==" class="btn">View Project</a>
-                </div>
-            </div> <!-- Correctly closed -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="All">ALL</button>
+                <button class="filter-btn" data-category="html">HTML</button>
+                <button class="filter-btn" data-category="css">CSS</button>
+                <button class="filter-btn" data-category="javascript">JavaScript</button>
+            </div>
+            <div class="projects-container">
+                <div class="project" data-category="html">
+                    <img src="project1.jpg" alt="Project 1">
+                    <div class="project-info">
+                        <h3>Project One</h3>
+                        <p>Basic Html Project</p>
+                        <a href="https://www.instagram.com/niehlynnz?igsh=MWJxamsxeHJ5Zmx5MQ==" class="btn">View Project</a>
+                    </div>
+                </div> <!-- Correctly closed -->
             
                 <!-- Project Two (Fixed Structure) -->
-            <div class="project"> <!-- This was missing -->
-                <img src="project2.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Project Two</h3>
-                    <p>A Fun Youtube Page posting random stuff.</p>
-                    <a href="https://youtube.com/@w.w3535?si=Wp3IVvbSGjr8WEA9" class="btn">View Project</a>
-                </div>
-            </div> 
+                <div class="project" data-category="css"> <!-- This was missing -->
+                    <img src="project2.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project Two</h3>
+                        <p>CSS Animation Project</p>
+                        <a href="https://youtube.com/@w.w3535?si=Wp3IVvbSGjr8WEA9" class="btn">View Project</a>
+                    </div>
+                </div> 
                 
-            <div class="project">
-                <img src="project3.jpg" alt="Project 2">
-                <div class="project-info">
-                    <h3>Project Three</h3>
-                    <p>This is a playlist.</p>
-                    <a href="https://open.spotify.com/playlist/1C040Mjk6jwoZBzF8mvvZ4?si=cPses9ZnTQGAm0ZfypVV_w&pi=tALDC_b2ROm4W" class="btn">View Project</a>
-                 </div>
+                <div class="project" data-category="javascript">
+                    <img src="project3.jpg" alt="Project 2">
+                    <div class="project-info">
+                        <h3>Project Three</h3>
+                        <p>JavaScript To-Do List</p>
+                        <a href="https://open.spotify.com/playlist/1C040Mjk6jwoZBzF8mvvZ4?si=cPses9ZnTQGAm0ZfypVV_w&pi=tALDC_b2ROm4W" class="btn">View Project</a>
+                    </div>
 
+                </div>
             </div><!-- Correctly closed -->
             
         </section>
@@ -101,4 +107,3 @@
         <button id="scroll-top">⬆️</button>
     </body>
 </html>
-
